@@ -1,7 +1,6 @@
 import streamlit as st
 import pickle
 import numpy as np
-pip install scikit-learn
 
 # Load the saved model
 model = pickle.load(open('linear_reg.sav','rb'))
@@ -18,6 +17,7 @@ if st.button('Predict Sales'):
     input_data = np.array([[TV, Radio, Newspaper]])
     prediction = model.predict(input_data)[0]
     st.success(f'Predicted Sales: {prediction:.2f}')
+
 
 
 
